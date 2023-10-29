@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        header.header
+            include header 
+
+        section.herosections
+            h1.heroSections__title.title ACERCA DE NOSOTROS
+        section.about 
+            h2.about__title.title ¿Quienes Somos?
+            - for (var x = 0; x < 3; x++)
+                p.about__paragraph.paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, laborum architecto mollitia porro illo natus sequi nam eligendi placeat quasi velit doloribus aspernatur voluptatem id ducimus non dolor quidem. Hic??
+            img.about__img(src="", alt="")
+
+        aside.aside
+            include aside
+        footer.footer
+            include footer

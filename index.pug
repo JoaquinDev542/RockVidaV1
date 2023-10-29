@@ -1,0 +1,104 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Documentos
+    body 
+        header.header
+            include pug/header
+        main.main
+            section.hero
+                .heroTextMove
+                    - for (var x = 0; x < 8; x++)
+                        span.heroTextMove__span Asociación Civil
+                .heroContent
+                    span.heroContent__span Asociación Civil
+                    h1.heroContentTitle: img.heroContentTitle__img(src="", alt="")
+                    .heroContentImg
+                        img.heroContentImg__img(src="", alt="")
+                        a.heroContentImg__link(href="") Saber Mas
+            section.about
+                h2.about__title.subtitle Acerca de Nosotros
+                p.about__paragraph.paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis accusamus expedita fugit maiores vitae, voluptate assumenda quidem impedit mollitia autem adipisci dignissimos repudiandae corrupti nemo, voluptas harum repellendus eos sit.
+                .aboutContainers
+                    .aboutContainer.aboutContainer--first
+                        mixin aboutContainerContent
+                            h3.aboutContainer__title.subsubtitle 
+                            img.aboutContainer__img(src="", alt="")
+                            a.aboutContainerLink(href="")
+                                span.aboutContainerLink__span 
+                                img.aboutContainerLink__img(src="", alt="")
+                        +aboutContainerContent
+                    .aboutContainer.aboutContainer--second
+                        +aboutContainerContent
+                    .aboutContainer.aboutContainer--third
+                        +aboutContainerContent
+            section.quotes
+                h2.quotes__title.subtitle Que Dicen de Nosotros..
+                .quotesContainers
+                    .quotesContainer.quotesContainer--first
+                        mixin quotesContainerContent
+                            .quotesContainerName
+                                img.quotesContainerName__img(src="", alt="")
+                                span.quotesContainerName__name  
+                            .quoutesContainerCite
+                                img.quotesContainerCite__img(src="", alt="")
+                                blockquotes.quotesContainerCite__blockquotes 
+                                img.quotesContainerCite__img(src="", alt="")
+                        +quotesContainerContent
+                    .quotesContainer.quotesContainer--second
+                        +quotesContainerContent
+                    .quotesContainer.quotesContainer--third
+                        +quotesContainerContent   
+                    .quotesContainer.quotesContainer--fourth
+                        +quotesContainerContent    
+                    .quotesContainer.quotesContainer--fifth
+                        +quotesContainerContent   
+                    .quotesContainer.quotesContainer--sixth
+                        +quotesContainerContent   
+                .quotesArrows
+                    a.quotesArrows__link.quotesArrows__link--first(href=""): img.quotesArrows__img(src="", alt="")
+                    a.quotesArrows__link.quotesArrows__link--second(href=""): img.quotesArrows__img(src="", alt="")          
+            section.information
+                h2.information__title.subtitle Donde Encontrarnos
+                section.informationSocialMedia
+                    h3.informationSocialMedia__title.subsubtitle Redes Sociales
+                    .informationSocialMediaContainer
+                        .informationSocialMediaContainerBox.informationSocialMediaContainerBox--instagram
+                            mixin informationSocialMediaContainerBoxContent
+                                a.informationSocialMediaContainerBoxLink(href="")
+                                    img.informationSocialMediaContainerBoxLink__img(src="", alt="")
+                                    span.informationSocialMediaContainerBoxLink__span 
+                            +informationSocialMediaContainerBoxContent
+                        .informationSocialMediaContainerBox.informationSocialMediaContainerBox--whatsapp
+                            +informationSocialMediaContainerBoxContent
+                        .informationSocialMediaContainerBox.informationSocialMediaContainerBox--gmail
+                            +informationSocialMediaContainerBoxContent
+                        .informationSocialMediaContainerBox.informationSocialMediaContainerBox--facebook
+                            +informationSocialMediaContainerBoxContent    
+                section.informationTime
+                    h3.informationTime__title.subsubtitle Horarios
+                    section.informationTimeDirection
+                        h4.informationTimeDirection__title Dirección:
+                        span.informationTimeDirection__span C/Leonor de Cortinas 25
+                    section.informationTimeWhen
+                        h4.informationTimeWhen__title Horario:
+                        span.informationTimeWhen__span 8:00h - 19:00h
+            section.contact
+                h2.contact__title.subtitle Contacta con Nosotros
+                form.form(action="")
+                    input.input.input--name(type="text")(placeholder="Nombre:")
+                    input.input.input--email(type="email")(placeholder="Email:")
+                    textarea.textarea(placeholder="Mensaje...")
+                    a.form__send(href="#") Enviar
+            .blogContainers
+                include pug/blogContainer 
+            aside.aside
+                include pug/aside 
+        footer.footer
+            include pug/footer   
+              
+     
+    

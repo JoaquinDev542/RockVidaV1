@@ -1,0 +1,19 @@
+section.blog
+    h1.blog__title.title NUESTRO BLOG 
+    .blogContent.blogContent--first
+        mixin blogContentContent
+            a.blog__link(href="") 
+                img.blogContent__img(src=" ", alt="")
+                h4.blogContent__subtitle.subtitle
+                p.blogContent__paragraph.paragraph
+        +blogContentContent
+    .blogContent.blogContent--second
+        +blogContentContent
+    .blogContent.blogContent--third
+        +blogContentContent
+    .blogContent.blogContent--fourth
+        +blogContentContent
+    .blogNextPage
+        p.blogNextPage__paragraph.paragraph Página 
+            - for ( let x=1; x<4; x++)
+                a.blogNextPage__link(href="./page1.html") #{x}

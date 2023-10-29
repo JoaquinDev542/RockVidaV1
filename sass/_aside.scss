@@ -1,0 +1,38 @@
+@use "variables";
+@use "general";
+
+.aside {
+    position: relative;
+    transform: translateY(50%);
+    margin-left: clamp(0.75rem, 5vw, 2.8125rem);
+    margin-right: clamp(0.75rem, 5vw, 2.8125rem);
+    display: grid;
+    text-align: center;
+    gap: 2.1875rem;
+    background-color: var(--color-title);
+    color: var(--color-bg);
+    border-radius: 10px;
+    padding: 70px 20px;
+    // z-index: 1;
+
+    &__title {
+        letter-spacing: 0.0625rem;
+    }
+
+    &__link {
+        color: var(--color-paragraph);
+        background-color: var(--color-bg);
+        width: max-content;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+        font-weight: 600;
+        padding:clamp(.75rem , 1.75vw , 1.25rem) clamp(1.5rem , 3vw , 8rem);
+        font-size: clamp(0.9375rem, 1.15vw, 1.25rem);
+    }
+
+    @media screen and (min-width:1024px){
+        margin: 0;
+        border-radius: 0;
+    }
+}

@@ -1,0 +1,70 @@
+@use "variables";
+@use "general";
+@use "header";
+@use "aside";
+@use "footer";
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.blog {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: clamp(0.75rem , 5vw , 2.8125rem);
+    padding-right: clamp(0.75rem , 5vw , 2.8125rem);
+}
+
+.blog__title {
+    font-size: clamp(2.5rem, 4.25vw, 5rem);
+}
+
+.blogContainerBoxs {
+    display: grid;
+    gap: clamp(2rem , 10vw , 4rem);
+    @media screen and (min-width:768px){
+        grid-template-columns: repeat(2 , auto);
+    }
+}
+
+.blogContent {
+    &__link {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        max-width: 500px;
+        margin: 0 auto;
+        @media screen and (min-width:768px){
+            max-width: none;
+        }
+    }
+
+    &__img {
+        height: 350px;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+
+    &__subtitle {
+        margin: 0;
+        font-size: clamp(1.0625rem , 1.5vw , 1.4375rem);
+    }
+
+}
+
+.blogNextPage {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__paragraph {
+        display: flex;
+        gap: .5rem;
+    }
+
+    &__link {
+        &--active {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.aside {
+    display: block;
+    border: 2px solid black;
+    padding: 50px;
+    margin: 20px 20px;
+    text-align: center;
+    color: #F5F5F5;
+    background-color: #1D1D1B;
+    border-radius: 10px;
+}
+
+.asidelink {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    color: #1D1D1D;
+}
